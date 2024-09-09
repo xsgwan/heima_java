@@ -7,9 +7,14 @@
 
 注意事项:
 	权限修饰符(public、private、protected、缺省)
-	private		在本类中访问				
-	缺省		在本类中访问	同一个包下其他类访问
-	protected	在本类中访问	同一个包下其他类访问	任意包下子类访问
-	public		在本类中访问	同一个包下其他类访问	任意包下子类访问	任意包下任意类访问
-	private < 缺省 < protected < public
-		
+		private		在本类中访问				
+		缺省		在本类中访问	同一个包下其他类访问
+		protected	在本类中访问	同一个包下其他类访问	任意包下子类访问
+		public		在本类中访问	同一个包下其他类访问	任意包下子类访问	任意包下任意类访问
+				private < 缺省 < protected < public
+	单继承、Object
+		单继承:		--只能有一个父类，但可以多层继承
+			Java是单继承的，Java中的类不支持多继承，但是支持多层继承
+		Object类:
+			object类是java所有类的祖宗类。我们写的任何一个类，其实都是object的子类或子孙类
+
