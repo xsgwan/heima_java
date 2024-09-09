@@ -1,4 +1,4 @@
-package com.gyy.extends_feature;
+package com.gyy.Extends_feature;
 
 public class Test {
     public static void main(String[] args) {
