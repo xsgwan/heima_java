@@ -12,3 +12,28 @@
 	好处:
 		弥补了类单继承的不足,一个类同时可以实现多个接口
 		让程序可以面向接口编程,这样程序员就可以灵活方便的切换各种业务实现
+	案例实现:
+		实体类Student:
+			数据封装
+		ClassManager:
+			操作类,对实体类Student数据进行操作
+			ArrayList<Student> students = new ArrayList<>();	// 创建学生集合
+			StudentOperator studentOperator = new StudentOperatorImpl1();	// 面向接口编程,
+										// 任意切换实现类实例，完成相应操作
+			构造器							// 初始化学生集合
+			printInfo(){  studentOperator.printAllInfo(students);	}	// 调用实现类实例中重写方法，
+										// 完成相应操作
+			printScore(){  studentOperator.printAverageScore(students)  }	// 调用实现类实例中重写方法，
+                                                                                // 完成相应操作
+		StudentOperator接口:
+			声明两个抽象方法:
+				void printAllInfo(ArrayList<Student> students);
+				void printAverageScore(ArrayList<Student> students);
+		StudentOperatorImpl1:
+			接口实现类1:
+				重写printAllInfo方法;
+				重写printAverageScore方法;
+		StudentOperatorImpl2:
+			接口实现类2:
+				重写printAllInfo方法; 
+				重写printAverageScore方法;
