@@ -37,3 +37,39 @@
 			接口实现类2:
 				重写printAllInfo方法; 
 				重写printAverageScore方法;
+	jdk8之后的三种方法:
+		增强了接口的能力,更便于项目的扩展和维护
+	案例背景:	
+		在线购物系统
+			抽象方法:	--实现类必须重写方法
+				double getPrice();	// 抽象方法:	强制每个商品都必须实现自己的价格计算逻辑
+				String getName();	// 抽象方法:	强制每个商品都要提供自己的名称
+			默认方法:	--实现类可以不重写方法、也可以重写
+							// 默认方法:	提供一个通用的商品详情展示方法
+				default void showDetails(){
+					System.out.println("商品名称: " + getName());
+        				System.out.println("商品价格: " + getPrice() + " 元");
+    				}
+				好处:
+					减少了重复代码,同时可以提高灵活性,实现类需要自定义展示逻辑,也可以重写默认方法
+			私有方法:	--实现类不可以访问子方法,只可以在接口内部使用；
+				private void showCommonInfo() {
+     					System.out.println("这是一个通用的商品信息展示功能");
+    				}
+				好处:
+					代码复用:
+						showCommonInfo()是展示商品时的通用逻辑,通过私有方法提取出来后,
+						可以在多个默认方法中复用，避免重复代码
+					隐藏实现细节:
+						showCommonInfo()方法是私有的,外部类无法调用,也不需要关心这个方法,
+						只需使用showDetails()和showShortDetails()即可
+			静态方法:(类方法)	--属于类,可作为工作类使用
+				static String generateProductID() {
+     				   return UUID.randomUUID().toString();
+    				}
+				好处:
+					工具方法的封装:
+						generateProductID()与商品实例无关,是一个纯工具方法,
+						使用静态方法可以很好地封装这种工具功能
+					避免命名冲突:
+						静态方法不会被实现类继承,不会导致实现类中的方法命名冲突
