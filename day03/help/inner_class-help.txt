@@ -40,3 +40,17 @@
 				匿名内部类本质就是一个子类，并会立即创建出一个子类对象
 			作用:
 				用于更方便的创建一个子类对象
+			实际案例:
+				场景:
+					在图形用户界面（GUI）编程中,通常需要为按钮或其他组件添加事件监听器.
+					如果为每个按钮都创建一个新的类来处理事件会显得繁琐,匿名内部类可以简化这一过程
+				// 使用匿名内部类来实现ActionListener接口，并处理按钮的点击事件
+        			button.addActionListener(new ActionListener() {
+            				@Override
+            				public void actionPerformed(ActionEvent e) {
+                				System.out.println("按钮被点击！");
+            				}
+        			});
+				通过匿名内部类实现ActionListener接口,并在actionPerformed()方法中定义按钮点击后的行为.
+				这样,我们不需要专门创建一个单独的类来实现这个接口,简化了代码
+				该匿名内部类只在addActionListener()方法中使用,不需要在别的地方使用,因此没有必要命名它
