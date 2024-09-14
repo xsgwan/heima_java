@@ -28,7 +28,7 @@ public class Test1 {
         for (int i = 0; i < list1.size(); i++) {
             String e = list1.get(i);
             System.out.println(e);
-        }   
+        }
     }
 }
 
