@@ -11,4 +11,10 @@ API(Application Program Interface): 	--应用程序编程接口
 				对象中基本类型的数据直接拷贝
 				对象中的字符串数据拷贝的还是地址
 				对象中还包含的其他对象,不会拷贝地址,会创建新对象
+	Objects类:
+		Objects是一个工具类,提供了很多操作对象的静态方法给我们使用
+		方法:
+			public static boolean equals(Object a,Object b)		先做非空判断,再比较两个对象
+			public static boolean isNull(Object obj)		判断对象是否为null,为null返回true,反之
+			public static boolean nonNull(Object obj)		判断对象是否不为null,不为null则返回true,反之
 
