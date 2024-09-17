@@ -17,4 +17,30 @@ API(Application Program Interface): 	--应用程序编程接口
 			public static boolean equals(Object a,Object b)		先做非空判断,再比较两个对象
 			public static boolean isNull(Object obj)		判断对象是否为null,为null返回true,反之
 			public static boolean nonNull(Object obj)		判断对象是否不为null,不为null则返回true,反之
+	包装类:
+		包装类就是把基本类型的数据包装成对象
 
+		基本数据类型		对应的包装类(引用数据类型)
+		byte			Byte
+		short			Short
+		int			Integer
+		long			Long
+		char			Character
+		float			Float
+		double			Double
+		boolean			Boolean
+	
+		Integer:
+			基本类型的数据包装成对象的方案
+				public Integer(int value):已过时
+				public static Integer valueOf(int i)
+		自动装箱: 基本数据类型可以自动转换为包装类型
+		自动拆箱: 包装类型可以自动转换为基本数据类型
+
+		包装类的其他常见操作
+			可以把基本类型的数据转换成字符串类型
+				public static String toString(double d)
+				public String toString()
+			可以把字符串类型的数值转换成数值本身对应的数据类型
+				public static int parselnt(String s)
+				public static Integer valueOf(String s)
