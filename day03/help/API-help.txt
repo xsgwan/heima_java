@@ -1,2 +1,14 @@
 API(Application Program Interface): 	--应用程序编程接口
+	Object类:
+		Object类是Java中所有类的祖宗类,因此,Java中所有类的对象都可以直接使用Object类中提供的一些方法
+		方法:
+			public String toString()		返回对象的字符串表示形式
+			public boolean equals(Object o)		判断两个对象是否相等
+			protected Object clone()		对象克隆
+			浅克隆:
+				拷贝出的新对象,与原对象中的数据一模一样(引用类型拷贝的只是地址)
+			深克隆:
+				对象中基本类型的数据直接拷贝
+				对象中的字符串数据拷贝的还是地址
+				对象中还包含的其他对象,不会拷贝地址,会创建新对象
 
