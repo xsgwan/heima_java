@@ -16,3 +16,14 @@ API:
 			public static long currentTimeMillis()			返回当前系统的时间毫秒值形式
 			时间毫秒值
 				指的是从1970年1月1日 00:00:00走到此刻的总的毫秒数,应该是很大的 1s = 1000ms
+	RunTime类:
+		代表程序所在的运行环境
+		Runtime是一个单例类
+		常见方法:
+			public static Runtime getRuntime()			返回与当Java应用程序关联的运行时对象
+			public void exit(int status)				终止当前运行的虚拟机
+			public int availableProcessors()			返回Java虚拟机可用的处理器数
+			public long totalMemory()				返回Java虚拟机中的内存总量
+			public long freeMemory()				返回Java虚拟机中的可用内存
+			public Process exec(String command)			启动某个程序,并返回代表该程序的对象
+		exec()方法中的参数是程序所在的地址
