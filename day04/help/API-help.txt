@@ -9,3 +9,10 @@ API:
 			public static int max(int a,int b)			获取两个int值中的较大值
 			public static double pow(double a,double b)		返回a的b次幂的值
 			public static double random()				返回值为doub1e的随机值，范围[0.0,1.0)
+	System类:
+		System代表程序所在的系统,也是一个工具类
+		常用方法:
+			public static void exit(int status)			终止当前运行的Java虚拟机
+			public static long currentTimeMillis()			返回当前系统的时间毫秒值形式
+			时间毫秒值
+				指的是从1970年1月1日 00:00:00走到此刻的总的毫秒数,应该是很大的 1s = 1000ms
