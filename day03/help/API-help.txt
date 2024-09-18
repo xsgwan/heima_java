@@ -44,3 +44,24 @@ API(Application Program Interface): 	--应用程序编程接口
 			可以把字符串类型的数值转换成数值本身对应的数据类型
 				public static int parselnt(String s)
 				public static Integer valueOf(String s)
+	StringBuilder:
+		StringBuilder代表可变字符串对象,相当于是一个容器,它里面装的字符串是可以改变的,就是用来操作字符串的
+		好处:
+			StringBuilder比String更适合做字符串的修改操作,效率会更高,代码也会更简洁
+		构造器:
+			public StringBuilder()				创建一个空白的可变的字符串对象,不包含任何内容
+			public StringBuilder(String str)		创建一个指定字符串内容的可变字符串对象
+		方法名称:
+			public StringBuilder append(任意类型)		添加数据并返回StringBuilder对象本身
+			public StringBuilder reverse()			将对象的内容反转
+			public int length()				返回对象内容长度
+			public String toString()			通过toString()就可以实现把StringBuilder转换为
+									String
+
+		对于字符串相关的操作,如频繁的拼接、修改等,建议用StringBuidler,效率更高!
+		注意:如果操作字符串较少,或者不需要操作,以及定义字符串变量,还是建议用String
+
+	StringBuffer:
+		注意:
+			StringBuffer的用法与StringBuilder是一模一样的
+			但StringBuilder是线程不安全的StringBuffer是线程安全的
