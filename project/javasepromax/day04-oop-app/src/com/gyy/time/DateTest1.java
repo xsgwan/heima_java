@@ -2,7 +2,7 @@ package com.gyy.time;
 
 import java.util.Date;
 
-public class Test {
+public class DateTest1 {
     public static void main(String[] args) {
         // 目标: 掌握Date日期类的使用
         // 1、创建一个Date的对象: 代表系统当前时间信息的
