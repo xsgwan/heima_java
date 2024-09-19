@@ -27,3 +27,18 @@ API:
 			public long freeMemory()				返回Java虚拟机中的可用内存
 			public Process exec(String command)			启动某个程序,并返回代表该程序的对象
 		exec()方法中的参数是程序所在的地址
+	BigDecimal类:
+		用于解决浮点型运算时,出现结果失真的问题
+		构造器:
+			public BigDecima1(double val)				将double转换为BigDecimal	[不推荐]
+			public BigDecimal(String val)				把String转成BigDecimal
+		常用方法:
+			public static BigDecimal valueof(double val)		转换一个double成BigDecimal
+			public BigDecimal add(BigDecimal b)			加法
+			public BigDecimal subtract(BigDecimal b)		减法
+			public BigDecimal multiply(BigDecimal b)		乘法
+			public BigDecimal divide(BigDecimal b)			除法
+			public BigDecimal divide(另一个BigDecimal对象,精确几位,舍入模式)
+										除法、可以控制精确到小数几位
+			public double doublevalue()				将BigDecimal转换为double
+										
