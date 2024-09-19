@@ -41,4 +41,15 @@ API:
 			public BigDecimal divide(另一个BigDecimal对象,精确几位,舍入模式)
 										除法、可以控制精确到小数几位
 			public double doublevalue()				将BigDecimal转换为double
+
+	
+	JDK8之前传统的日期、时间:
+		Data类:
+			代表日期和时间
+			构造器:
+				public Date()				创建一个Date对象,代表的是系统当前此刻日期时间
+				public Date(long time)			把时间毫秒值转换成Date日期对象
+			常用方法:
+				public long getTime()			返回从1970年1月1日 00:00:00走到此刻的总的毫秒数
+				public void setTime(long time)		设置日期对象的时间为当前时间毫秒值对应的时间
 										
