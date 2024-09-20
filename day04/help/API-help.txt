@@ -75,5 +75,14 @@ API:
 			String接收开始时间、结束时间、用户秒杀时间
 			将String类型解析成日期对象
 			getTime()把日期对象转转换成时间毫秒值进行比较
-			
-										
+		Calendar类:
+			代表的是系统此刻时间对应的日历
+			通过它可以单独获取、修改时间中的年、月、日、时、分、秒等
+			常用方法:
+				public static Calendar getInstance()		获取当前日历对象
+				public int get(int field)			获取日历中的某个信息
+				public final Date getTime()			获取日期对象
+				public long getTimeInMillis()			获取时间毫秒值
+				public void set(int field,int value)		修改日历的某个信息
+				public void add(int field,int amount)		为某个信息增加/减少指定的值
+			注意: calendar是可变对象,一旦修改后其对象本身表示的时间将产生变化
