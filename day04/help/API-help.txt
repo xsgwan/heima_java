@@ -95,3 +95,76 @@ API:
 		3、线程不安全					3、线程安全
 		4、只能精确到毫秒				4、能精确到毫秒、纳秒
 	--------------------------------------------------------------------------------------------------------
+	JDK8新增时间:
+		代替Calendar:
+			LocalDate:
+				代表本地日期(年、月、日、星期)
+			LocalTime:
+				代表本地时间(时、分、秒、纳秒)
+			LocalDateTime:
+				代表本地日期、时间(年、月、日、星期、时、分、秒、纳秒)
+				
+			获取对象方法:
+				public static Xxxx now():获取系统当前时间对应的该对象
+					LocaDate ld = LocalDate.now();
+					LocalTime lt = LocalTime.now();
+					LocalDateTime ldt = LocalDateTime.now();
+			常见方法:
+				LocalDate:		
+					获取本地日期对象(不可变对象)
+						LocaDate ld = LocalDate.now();
+					获取指定日期的LocalDate对象
+						LocalDate ld = LocalDate.of(year, month, dayOfMonth);
+					获取日期对象中的信息
+						ld.getYear();				// 年
+						ld.getMonthValue();			// 月
+						ld.getDayOfMonth();			// 日
+						ld.getDayOfYear(); 			// 一年中的第几天
+						ld.getDayOfWeek().getValue(); 		// 星期几
+					直接修改某个信息
+						ld.withYear();				// 修改年
+						ld.withMonth();				// 修改月
+						···
+					把某个信息加多少
+						ld.plusYears();				// 年
+						ld.plusMonths();			// 月
+						ld.plusDays();				// 日
+						ld.plusWeeks();				// 星期
+					把某个信息减多少
+						ld.minusYears();			// 年
+						ld.minusMonths();                       // 月
+						ld.minusDays();                         // 日
+						ld.minusWeeks();                        // 星期
+					判断2个日期对象,是否相等,在前还是在后:
+						ld1.equals(ld2);			// 相等?
+						ld1.isBefore(ld2);			// 在前?
+						ld1.isAfter(ld2);			// 在后?
+				LocalTime:
+					获取本地时间对象
+						LocalTime lt = LocalTime.now();
+					获取指定时间对象
+						LocalTime lt = LocalTime.of(hour, minute, second);
+					获取时间中的信息
+						lt.getHour();				// 时
+						lt.getMinute();				// 分
+						lt.getSecond(); 			// 秒
+						lt.getNano(); 				// 纳秒
+					修改时间
+						lt.withHour(int hour);			// 时
+						lt.withMinute(int minute);		// 分
+						lt.withSecond(int second);		// 秒
+						lt.withNano(int nano);			// 纳秒
+					把某个时间加多少
+						lt.plusHours(int hour);			// 时
+						lt.plusMinutes(int minute);             // 分
+						lt.plusSeconds(int second);             // 秒
+						lt.plusNanos(int nano);                 // 纳秒
+					把某个时间减多少
+						lt.minusHours(int hour);                // 时
+						lt.minusMinutes(int minute);            // 分
+						lt.minusSeconds(int second);            // 秒
+						lt.minusNanos(int nano);                // 纳秒
+					判断2个时间对象,是否相等,在前还是在后
+						lt1.equals(lt2);                        // 相等?
+                                                lt1.isBefore(lt2);                      // 在前?
+                                                lt1.isAfter(lt2);                       // 在后?
