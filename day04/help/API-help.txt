@@ -167,4 +167,48 @@ API:
 					判断2个时间对象,是否相等,在前还是在后
 						lt1.equals(lt2);                        // 相等?
                                                 lt1.isBefore(lt2);                      // 在前?
-                                                lt1.isAfter(lt2);                       // 在后?
+                                                lt1.isAfter(lt2);			// 在后?
+					获取本地日期和时间对象
+						LocalDateTime ldt = LocalDateTime.now();
+					获取指定日期和时间的LocalDateTime对象
+						LocalDateTime ldt8 = LocalDateTime.of(year, month, dayOfMonth,
+								hour, minute, second, nanoOfSecond);
+					获取日期和时间信息
+						ldt.getYear(); 				// 年
+						ldt.getMonthValue(); 			// 月
+						ldt.getDayOfMonth(); 			// 日
+						ldt.getDayOfYear(); 			// 一年中的第几天
+						ldt.getDayOfWeek().getValue(); 		// 获取是周几
+						ldt.getHour(); 				// 时
+						ldt.getMinute(); 			// 分
+						ldt.getSecond(); 			// 秒
+						ldt.getNano(); 				// 纳秒
+					修改时间信息
+						ldt.withYear(int year)			// 年
+						ldt.withMonth(int month)		// 月
+						ldt.withDayOfMonth(int dayOfMonth)	// 日
+						ldt.withDayOfYear(int dayOfYear)	// 一年中的第几天
+						···
+						ldt.withNano(int nanoOfSecond)		// 纳秒
+					把日期、时间加多少
+						ldt.plusYears(int year)                 // 年
+						ldt.plusMonths(int month)               // 月
+						ldt.plusWeeks(int week)			// 星期
+						ldt.plusDays(int day)			// 天
+						···
+						ldt.plusNanos(int nanoOfSecond)		// 纳秒
+					把日期、时间减多少
+						ldt.minusYears(int year)                // 年
+                                                ldt.minusMonths(int month)              // 月
+						ldt.minusWeeks(int week)                // 星期
+						ldt.minusDays(int day)                  // 天
+						···
+						ldt.minusNanos(int nanoOfSecond)	// 纳秒
+					判断2个时间对象,是否相等,在前还是在后
+						ldt1.equals(ldt2);                      // 相等?
+                                                ldt1.isBefore(ldt2);                    // 在前?
+                                                ldt1.isAfter(ldt2);                     // 在后?
+					可以把LocalDateTime转换成LocalDate和LocalTime
+						public LocalDate toLocalDate()
+						public LocalTime toLocalTime()
+						public static LocalDateTime.of(LocalDate date,LocalTime time)
