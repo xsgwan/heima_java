@@ -240,4 +240,31 @@ API:
 						plus···()
 						minus···()
 						···
+		代替Date类:
+			Instant类:		-- 时间戳/时间线
+				通过获取Instant的对象可以拿到此刻的时间,该时间由两部分组成:
+				从1970-01-01 00:00:00开始走到此刻的总秒数 + 不够1秒的纳秒数
+				常见方法:
+					获取当前时间的Instant对象(标准时间)
+						Instant now = Instant.now();
+					获取从1970-01-01T00:00:00开始记录的秒数
+						long second = now.getEpochSecond();
+					从时间线开始,获取从第二个开始的纳秒数
+						int nano = now.getNano();
+					增加时间系列的方法
+						now.plusSeconds()
+						now.plusMillis()
+						now.plusNanos()
+					减少时间系列的方法
+						now.minusSeconds()
+						now.minusMillis()
+						now.minusNanos()
+					判断系列的方法
+						now.equals(now1)
+						now.isBefore(now1)
+						now.isAfter(now1)
+				作用:
+					可以用来记录代码的执行时间,或用于记录用户操作某个事件的时间点
+					传统的Date类,只能精确到毫秒,并且是可变对象;
+					新增的Instant类,可以精确到纳秒,并且是不可变对象,推荐用Instant代替Date
 
