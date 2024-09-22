@@ -212,3 +212,32 @@ API:
 						public LocalDate toLocalDate()
 						public LocalTime toLocalTime()
 						public static LocalDateTime.of(LocalDate date,LocalTime time)
+				--------------------------------------------------------------------------------
+			ZoneId类:		-- 代表时区id
+				洲名/城市名:	Asia/Shanghai		Asia/Chongqing
+				国家名/城市名:	America/New_York
+				常见方法:
+					获取系统默认的时区
+						ZoneId zoneId = ZoneId.systemDefault();
+					获取Java支持的全部时区Id
+						public static Set<String>getAvailableZoneIds()
+							ZoneId.getAvailableZoneIds();
+					把某个时区id封装成ZoneId对象
+						public static ZoneId of(String zoneId)
+							ZoneId.of(String zoneId);
+			ZoneDateTime类:		-- 带时区的时间
+				常见方法:
+					获取某个时区的ZonedDateTime对象
+						ZonedDateTime now = ZonedDateTime.now(zoneId);
+						ZonedDateTime now = ZonedDateTime.now(Clock.systemUTC());	
+												//世界标准时间
+					获取系统默认时区的ZonedDateTime对象
+						ZonedDateTime now = ZonedDateTime.now();
+					其他常见方法
+						与LocalDateTime使用方法一致
+						get···()
+						with···()
+						plus···()
+						minus···()
+						···
+
