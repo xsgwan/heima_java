@@ -279,5 +279,14 @@ API:
 					解析时间
 						String dateStr = "2029年12月12日 12:12:11";
 						LocalDateTime ldt = LocalDateTime.parse(dateStr, formatter);
-						
+		其他补充:
+			Period类:
+				可以用于计算两个LocalDate对象相差的年数、月数、天数
+				常见方法:
+					获得Period对象,封装两个日期对象
+						Period period = Period.between(start, end);	// 日期对象只能是LocalDate对象
+					获取两个日期对象相差的信息
+						period.getYears()				// 两者相差?年
+						period.getMonths()				// 两者相差?月
+						period.getDays()				// 两者相差?日
 
