@@ -225,7 +225,7 @@ API:
 					把某个时区id封装成ZoneId对象
 						public static ZoneId of(String zoneId)
 							ZoneId.of(String zoneId);
-			ZoneDateTime类:		-- 带时区的时间
+			ZonedDateTime类:	-- 带时区的时间
 				常见方法:
 					获取某个时区的ZonedDateTime对象
 						ZonedDateTime now = ZonedDateTime.now(zoneId);
@@ -267,4 +267,17 @@ API:
 					可以用来记录代码的执行时间,或用于记录用户操作某个事件的时间点
 					传统的Date类,只能精确到毫秒,并且是可变对象;
 					新增的Instant类,可以精确到纳秒,并且是不可变对象,推荐用Instant代替Date
+		代替SimpleDateFormat类:
+			DateTimeFormatter类:
+				格式化器,用于时间的格式化、解析,线程安全
+				常见方法:
+					获取日期时间格式化器对象
+						DateTimeFormatter formatter = DateTimeFormatter.ofPattern(String pattern);
+					格式化时间		-- 可以是LocalDateTime对象/ZonedDateTime对象
+						formatter.format(now); 				// 正向格式化
+						now.format(formatter);				// 反向格式化
+					解析时间
+						String dateStr = "2029年12月12日 12:12:11";
+						LocalDateTime ldt = LocalDateTime.parse(dateStr, formatter);
+						
 
