@@ -289,4 +289,14 @@ API:
 						period.getYears()				// 两者相差?年
 						period.getMonths()				// 两者相差?月
 						period.getDays()				// 两者相差?日
-
+			Duration类:
+				可以用于计算两个时间对象相差的天数、小时数、分数、秒数、纳秒数;
+				支持LocalTime、LocalDateTime、Instant等时间
+				常见方法:
+					获得Duration对象,封装两个时间对象
+						duration.toDays()				// 间隔多少天
+						duration.toHours()				// 间隔多少小时
+						duration.toMinutes()				// 间隔多少分钟
+						duration.toSeconds()				// 间隔多少秒
+						duration.toMillis()				// 间隔多少毫秒
+						duration.toNanos()				// 间隔多少纳秒
